@@ -1,13 +1,24 @@
-# This is an example page
 ```mermaid
-sequenceDiagram
-    participant dotcom
-    participant iframe
-    participant viewscreen
-    dotcom->>iframe: loads html w/ iframe url
-    iframe->>viewscreen: request template
-    viewscreen->>iframe: html & javascript
-    iframe->>dotcom: iframe ready
-    dotcom->>iframe: set mermaid data on iframe
-    iframe->>iframe: render mermaid
+      flowchart TD
+      subgraph one
+        A(Home)-->B(Col 1 - Level 1)
+        A-->C(Col 2 - Level 1)
+        A-->G(Col 3 - Level 1)
+        A-->J(Col 4 - Level 1)
+        A-->L(Col 5 - Level 1)
+      end
+      subgraph two
+        C-->F(Col 2 - Level 2)
+        J-->K(Col 4 - Level 2)
+        G-->H(Col 3 - Level 2)
+      end
+        H-->I(Col 3 - Level 3)
+        B-->E(End)
+        F-->E
+        I-->E
+        K-->E
 ```
+
+
+## Examples
+- [Mermaid Example](mermaid-example.md)
